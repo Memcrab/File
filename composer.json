@@ -22,7 +22,7 @@
     },
 	"autoload": {
         "psr-4": {
-            "memCrab\\File\\": "src/"
+            "Memcrab\\File\\": "src/"
         }
     }
 }
