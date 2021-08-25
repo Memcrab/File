@@ -1,8 +1,8 @@
 <?php
 declare (strict_types = 1);
-namespace memCrab\File;
-use memCrab\Cache\FileCache;
-use memCrab\Exceptions\FileException;
+namespace Memcrab\File;
+use Memcrab\Cache\FileCache;
+use Memcrab\Exceptions\FileException;
 
 class File {
 	protected $content;
