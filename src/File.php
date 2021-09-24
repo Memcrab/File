@@ -1,30 +1,32 @@
-<?php
-declare (strict_types = 1);
+<?php declare (strict_types=1);
+
 namespace Memcrab\File;
-use Memcrab\Cache\FileCache;
-use Memcrab\Exceptions\FileException;
 
-class File {
-	protected $content;
 
-	public function load(string $filePath, FileCache $Cache = null): File{
-		$this->checkFilePath($filePath);
+use Memcrab\File\FileException;
 
-		$this->content = file_get_contents($this->filePath);
-		return $this;
-	}
+class File
+{
+    protected $content;
 
-	protected function checkFilePath(string $filePath): File {
-		if (!is_readable($filePath)) {
-			throw new FileException(
-				_("Can't find or read file:") . " " . $filePath,
-				501
-			);
-		}
-		return $this;
-	}
+    public function load(string $filePath): File
+    {
+        $this->checkFilePath($filePath);
 
-	public function getContent() {
-		return $this->content;
-	}
+        $this->content = file_get_contents($filePath);
+        return $this;
+    }
+
+    protected function checkFilePath(string $filePath): File
+    {
+        if (!is_readable($filePath)) {
+            throw new FileException(_("Can't find or read file:") . " " . $filePath, 501);
+        }
+        return $this;
+    }
+
+    public function getContent()
+    {
+        return $this->content;
+    }
 }
