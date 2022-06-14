@@ -1,7 +1,14 @@
- {
+{
     "name": "memcrab/file",
     "description": "PHP based File formates lib for memCrab Core API",
-    "keywords": ["File", "php", "yaml", "json", "lib", "memcrab"],
+    "keywords": [
+        "File",
+        "php",
+        "yaml",
+        "json",
+        "lib",
+        "memcrab"
+    ],
     "homepage": "http://memcrab.com",
     "license": "MIT",
     "authors": [
@@ -12,15 +19,13 @@
     ],
     "type": "package",
     "require": {
-		"php": ">=7.1",
-        "ext-yaml": ">=2.0.0",
-        "memcrab/exceptions": "1.1.*",
-        "memcrab/cache": "1.0.*"
+        "php": ">=7.1",
+        "ext-yaml": ">=2.0.0"
     },
-	"require-dev": {
-		"phpunit/phpunit": "6.*.*"
+    "require-dev": {
+        "phpunit/phpunit": "6.*.*"
     },
-	"autoload": {
+    "autoload": {
         "psr-4": {
             "Memcrab\\File\\": "src/"
         }
